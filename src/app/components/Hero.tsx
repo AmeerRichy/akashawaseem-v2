@@ -178,7 +178,7 @@ export default function Home() {
           }}
         >
           <img
-            src="/assets/images/akasha.png"
+            src="/assets/images/Akasha.png"
             alt="Akasha"
             className="name akasha"
             style={{
@@ -189,7 +189,7 @@ export default function Home() {
             }}
           />
           <img
-            src="/assets/images/waseem.png"
+            src="/assets/images/Waseem.png"
             alt="Waseem"
             className="name waseem"
             style={{

@@ -17,7 +17,7 @@ export default function DigitalArsenal() {
     { name: 'Photoshop', img: '/assets/images/Ps.png' },
     { name: 'Word', img: '/assets/images/Word.png' },
     { name: 'Excel', img: '/assets/images/X.png' },
-    { name: 'PowerPoint', img: '/assets/images/P.png' },
+    { name: 'PowerPoint', img: '/assets/images/p.png' },
   ]
 
   return (
@@ -36,7 +36,8 @@ export default function DigitalArsenal() {
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '2.5rem',
-            color: '#d29889',
+            color: '#D29889',
+             fontWeight: '400',
             letterSpacing: '1px',
             marginBottom: '10px',
           }}
@@ -45,9 +46,9 @@ export default function DigitalArsenal() {
         </h2>
         <p
           style={{
-            fontFamily: "'Poiret One', cursive",
+              fontFamily: "'Laila', serif",
             fontSize: '.9rem',
-            color: '#fff',
+            color: '#D1B3A4',
             letterSpacing: '2px',
           }}
         >

@@ -5,6 +5,8 @@ import {
   Playfair_Display,
   Quicksand,
   Poppins,
+  Laila,
+  Poiret_One,
 } from "next/font/google";
 import "./globals.css";
 
@@ -35,6 +37,19 @@ const poppins = Poppins({
   weight: ["300", "400", "500"],
 });
 
+// ✅ New font additions
+const laila = Laila({
+  variable: "--font-laila",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const poiret = Poiret_One({
+  variable: "--font-poiret",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 // ✅ Metadata with multiple favicon fallbacks
 export const metadata: Metadata = {
   title: "Akasha Waseem",
@@ -55,9 +70,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${quicksand.variable} ${poppins.variable}`}
+      className={`
+        ${geistSans.variable}
+        ${geistMono.variable}
+        ${playfair.variable}
+        ${quicksand.variable}
+        ${poppins.variable}
+        ${laila.variable}
+        ${poiret.variable}
+      `}
     >
-      {/* 👇 add this head tag manually for guaranteed favicon load */}
       <head>
         <link
           rel="icon"
@@ -66,7 +88,6 @@ export default function RootLayout({
           sizes="32x32"
         />
       </head>
-
       <body>{children}</body>
     </html>
   );

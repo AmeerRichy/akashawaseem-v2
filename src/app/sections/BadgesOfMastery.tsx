@@ -24,7 +24,8 @@ export default function BadgesOfMastery() {
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '2.5rem',
-            color: '#d29889',
+            color: '#D29889',
+             fontWeight: '400',
             letterSpacing: '1px',
             marginBottom: '10px',
           }}
@@ -32,10 +33,10 @@ export default function BadgesOfMastery() {
           Badges of Mastery
         </h2>
         <p
-          style={{
-            fontFamily: "'Poiret One', cursive",
+        style={{
+              fontFamily: "'Laila', serif",
             fontSize: '.9rem',
-            color: '#fff',
+            color: '#D1B3A4',
             letterSpacing: '2px',
           }}
         >

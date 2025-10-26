@@ -97,21 +97,22 @@ export default function FlyinWidget() {
       <div style={{ marginBottom: '2.5rem', position: 'relative', zIndex: 2 }}>
         <h2
           style={{
+              fontFamily: "'Laila', serif",
             fontSize: '2.6rem',
+             fontWeight: '400',
             marginBottom: '.5rem',
-            color: '#d29889',
-            letterSpacing: '0.5px',
+            color: '#D29889',
+           letterSpacing: '1px',
           }}
         >
           My Professional Journey
         </h2>
         <p
-          style={{
-            fontFamily: "'Poiret One', cursive",
-            color: '#fff',
-            letterSpacing: '2px',
-            marginBottom: '2rem',
+         style={{
+              fontFamily: "'Laila', serif",
             fontSize: '.9rem',
+            color: '#D1B3A4',
+            letterSpacing: '2px',
           }}
         >
           CORPORATE FIGHTS. BIG WINS. REAL GROWTH.

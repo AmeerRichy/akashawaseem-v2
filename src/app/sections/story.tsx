@@ -29,11 +29,12 @@ const StorySection: React.FC = () => {
         {/* Title */}
         <h2
           style={{
-            color: '#e9c5b3',
-            fontFamily: 'var(--font-playfair)',
-            fontWeight: 500,
+            color: '#D29889',
+           fontFamily: "'Laila', serif",
+            fontWeight: '400',
             fontSize: 'clamp(2rem, 4vw, 2.8rem)',
             marginBottom: '0.5rem',
+            letterSpacing: '1px',
           }}
         >
           The Story So Far
@@ -41,13 +42,11 @@ const StorySection: React.FC = () => {
 
         {/* Subtitle */}
         <p
-          style={{
-            fontFamily: 'var(--font-poppins)',
-            fontSize: '0.85rem',
-            color: '#c8a890',
+         style={{
+              fontFamily: "'Laila', serif",
+            fontSize: '.9rem',
+            color: '#D1B3A4',
             letterSpacing: '2px',
-            textTransform: 'uppercase',
-            marginBottom: '4rem',
           }}
         >
           One Pixel, One Page, One Frame At A Time!

@@ -31,18 +31,20 @@ export default function UnderTheHood() {
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '2.5rem',
-            color: '#d29889',
+            color: '#D29889',
             marginBottom: '8px',
+            fontWeight: '400',
+            letterSpacing: '1px',
           }}
         >
           Under the Hood
         </h2>
         <p
-          style={{
-            fontFamily: "'Poiret One', cursive",
-            letterSpacing: '2px',
+         style={{
+              fontFamily: "'Laila', serif",
             fontSize: '.9rem',
-            color: '#ccc',
+            color: '#D1B3A4',
+            letterSpacing: '2px',
           }}
         >
           THINGS I BREAK (AND THEN FIX EVEN BETTER)

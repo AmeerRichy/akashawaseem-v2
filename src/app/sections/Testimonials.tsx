@@ -53,7 +53,8 @@ export default function Testimonials() {
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '2.5rem',
-            color: '#d29889',
+            color: '#D29889',
+ fontWeight: '400',
             marginBottom: '10px',
             letterSpacing: '1px',
           }}
@@ -62,10 +63,10 @@ export default function Testimonials() {
         </h2>
         <p
           style={{
-            fontFamily: "'Poiret One', cursive",
-            letterSpacing: '3px',
-            fontSize: '.95rem',
-            color: '#c5b1a9',
+              fontFamily: "'Laila', serif",
+            fontSize: '.9rem',
+            color: '#D1B3A4',
+            letterSpacing: '2px',
           }}
         >
           UNPAID. UNSCRIPTED. UNBELIEVABLY KIND.

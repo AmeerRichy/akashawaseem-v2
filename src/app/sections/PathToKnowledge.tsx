@@ -48,18 +48,20 @@ export default function PathToKnowledge() {
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '2.5rem',
-            color: '#d29889',
+             fontWeight: '400',
+            color: '#D29889',
             marginBottom: '8px',
+            letterSpacing: '1px',
           }}
         >
           The Path to Knowledge
         </h2>
         <p
-          style={{
-            fontFamily: "'Poiret One', cursive",
-            letterSpacing: '2px',
+         style={{
+              fontFamily: "'Laila', serif",
             fontSize: '.9rem',
-            color: '#ccc',
+            color: '#D1B3A4',
+            letterSpacing: '2px',
           }}
         >
           EXPERIENCE GAINED IN KNOWLEDGE & CHAOS

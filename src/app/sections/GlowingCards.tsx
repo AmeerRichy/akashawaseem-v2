@@ -30,7 +30,7 @@ export default function LabsOfWonders() {
         color: '#fff',
         textAlign: 'center',
         position: 'relative',
-        overflow: 'hidden',
+        overflow: 'visible', // ✅ FIXED: allow glow to render outside on mobile
       }}
     >
       {/* Header */}
@@ -39,18 +39,20 @@ export default function LabsOfWonders() {
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '2.5rem',
-            color: '#d29889',
+            fontWeight: '400',
+            color: '#D29889',
             marginBottom: '8px',
+            letterSpacing: '1px',
           }}
         >
           Labs of Wonders
         </h2>
         <p
           style={{
-            fontFamily: "'Poiret One', cursive",
-            letterSpacing: '2px',
+            fontFamily: "'Laila', serif",
             fontSize: '.9rem',
-            color: '#ccc',
+            color: '#D1B3A4',
+            letterSpacing: '2px',
           }}
         >
           WHERE IDEAS TURN INTO COOL STUFF
@@ -69,7 +71,11 @@ export default function LabsOfWonders() {
         }}
       >
         {cards.map((card, i) => (
-          <div key={i} className="pod" style={{ ['--glow' as any]: card.glowColor }}>
+          <div
+            key={i}
+            className="pod"
+            style={{ ['--glow' as any]: card.glowColor }}
+          >
             {/* Glow Layers */}
             <div className="glw"></div>
             <div className="darkBordrBg"></div>
@@ -78,8 +84,17 @@ export default function LabsOfWonders() {
 
             {/* Card Content */}
             <div className="wwd-link-preview">
-              <img src={card.img} alt={card.title} className="wwd-thumbnail" />
-              <a href={card.url} target="_blank" rel="noreferrer" className="wwd-preview-text">
+              <img
+                src={card.img}
+                alt={card.title}
+                className="wwd-thumbnail"
+              />
+              <a
+                href={card.url}
+                target="_blank"
+                rel="noreferrer"
+                className="wwd-preview-text"
+              >
                 <h4>{card.title}</h4>
                 <p>{card.desc}</p>
                 <span className="wwd-url">{card.displayUrl}</span>
