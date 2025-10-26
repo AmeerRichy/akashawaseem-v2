@@ -15,7 +15,7 @@ export default function BadgesOfMastery() {
         background: '#050505',
         color: '#fff',
         textAlign: 'center',
-        padding: '100px 0 120px',
+        padding: '0px 0 120px',
       }}
     >
       {/* HEADER */}
