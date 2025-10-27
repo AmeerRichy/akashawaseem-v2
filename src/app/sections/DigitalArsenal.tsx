@@ -124,8 +124,8 @@ export default function DigitalArsenal() {
         }
 
         .custom-bullet {
-          width: 10px;
-          height: 10px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           background: #4a3b35;
           opacity: 0.7;
