@@ -113,7 +113,7 @@ background: 'linear-gradient(to top, #050505 80%, #2b1f18 100%)',
             fontSize: '.9rem',
             color: '#D1B3A4',
             letterSpacing: '2px',
-            marginBottom: 'rem',
+            marginBottom: '2rem',
           }}
         >
           CORPORATE FIGHTS. BIG WINS. REAL GROWTH.
