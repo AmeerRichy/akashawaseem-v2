@@ -25,13 +25,14 @@ export default function LabsOfWonders() {
   return (
     <section
       style={{
-        background: 'radial-gradient(circle at 50% top, #0b0b0b 0%, #000 100%)',
-        padding: '100px 20px',
-        color: '#fff',
-        textAlign: 'center',
-        position: 'relative',
-        overflow: 'visible', // ✅ FIXED: allow glow to render outside on mobile
-      }}
+  background: 'radial-gradient(circle at 50% bottom, #0b0b0b 0%, #000 100%)',
+  padding: '100px 20px',
+  color: '#fff',
+  textAlign: 'center',
+  position: 'relative',
+  overflow: 'visible', // ✅ allows glow to render outside on mobile
+}}
+
     >
       {/* Header */}
       <div style={{ marginBottom: '60px' }}>
@@ -142,7 +143,7 @@ export default function LabsOfWonders() {
           left: 50%;
           width: 400px;
           height: 600px;
-          transform: translate(-50%, -50%) rotate(82deg);
+          transform: translate(-50%, -50%) rotate(250deg);
           background: conic-gradient(
             rgba(0, 0, 0, 0),
             var(--glow),
@@ -265,3 +266,5 @@ export default function LabsOfWonders() {
     </section>
   )
 }
+
+// asda

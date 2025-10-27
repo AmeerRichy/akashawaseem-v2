@@ -59,10 +59,10 @@ const StorySection: React.FC = () => {
             fontWeight: 300,
             fontSize: '1.05rem',
             color: '#e5e5e5',
-            textAlign: 'left',
+            textAlign: 'justify',
             lineHeight: 1.9,
             maxWidth: '1000px',
-            margin: '0 auto',
+            margin: '2rem auto',
             // padding: '0 0.75rem', 
           }}
         >

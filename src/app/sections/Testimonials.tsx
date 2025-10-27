@@ -87,8 +87,8 @@ export default function Testimonials() {
           breakpoints={{
             320: { slidesPerView: 1, spaceBetween: 18 },
             600: { slidesPerView: 1.2, spaceBetween: 20 },
-            768: { slidesPerView: 2, spaceBetween: 24 },
-            1024: { slidesPerView: 3, spaceBetween: 28 },
+            768: { slidesPerView: 4, spaceBetween: 24 },
+            1024: { slidesPerView: 4, spaceBetween: 28 },
           }}
         >
           {testimonials.map((t, i) => (

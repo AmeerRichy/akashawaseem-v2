@@ -4,9 +4,10 @@ import React from 'react'
 
 export default function BadgesOfMastery() {
   const badges = [
+    { name: 'Corvit Certificate', img: '/assets/images/cert3.png' },
     { name: 'Microsoft Certificate', img: '/assets/images/cert1.png' },
     { name: 'Python Institute', img: '/assets/images/cert2.png' },
-    { name: 'Corvit Certificate', img: '/assets/images/cert3.png' },
+    
   ]
 
   return (

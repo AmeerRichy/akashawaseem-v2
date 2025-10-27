@@ -85,7 +85,7 @@ export default function FlyinWidget() {
     <section
       style={{
         position: 'relative',
-        background: '#050505',
+background: 'linear-gradient(to top, #050505 80%, #2b1f18 100%)',
         color: '#d29889',
         fontFamily: "'Laila', serif",
         padding: '80px 1rem 120px',
@@ -113,6 +113,7 @@ export default function FlyinWidget() {
             fontSize: '.9rem',
             color: '#D1B3A4',
             letterSpacing: '2px',
+            marginBottom: 'rem',
           }}
         >
           CORPORATE FIGHTS. BIG WINS. REAL GROWTH.
@@ -185,7 +186,7 @@ export default function FlyinWidget() {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
             className="left-card"
             style={{
-              boxShadow: `0 0 40px ${active.dot}30 inset, 0 0 20px ${active.dot}10`,
+              // boxShadow: `0 0 40px ${active.dot}30 inset, 0 0 20px ${active.dot}10`,
             }}
           >
             <div className="logo-box">
