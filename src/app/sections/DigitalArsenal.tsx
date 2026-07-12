@@ -23,7 +23,11 @@ export default function DigitalArsenal() {
   return (
     <section
       style={{
-        background: '#050505',
+        position: 'relative',
+        zIndex: 20,
+        isolation: 'isolate',
+        width: '100%',
+        backgroundColor: '#000',
         color: '#fff',
         textAlign: 'center',
         padding: '100px 0 120px',
@@ -31,38 +35,57 @@ export default function DigitalArsenal() {
       }}
     >
       {/* HEADER */}
-      <div style={{ marginBottom: '50px' }}>
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 2,
+          marginBottom: '50px',
+        }}
+      >
         <h2
           style={{
-            fontFamily: "'Laila', serif",
-            fontSize: '2.5rem',
-            color: '#D29889',
-             fontWeight: '400',
+            fontFamily: "'Island Moments', cursive",
+            fontSize: 'clamp(58px, 5vw, 84px)',
+            fontWeight: '400',
+            lineHeight: '0.82',
+            color: '#fff',
             letterSpacing: '1px',
-            marginBottom: '10px',
+            margin: '0 0 14px',
           }}
         >
           My Digital Arsenal
         </h2>
+
         <p
           style={{
-              fontFamily: "'Laila', serif",
-            fontSize: '.9rem',
-            color: '#D1B3A4',
-            letterSpacing: '2px',
+            fontFamily: "'Halant', serif",
+            fontSize: '12px',
+            fontWeight: '400',
+            lineHeight: '1.35',
+            color: 'rgba(255,255,255,0.88)',
+            letterSpacing: '0',
+            textTransform: 'uppercase',
+            margin: 0,
           }}
         >
-          EVERY DESIGNER & DEV’S SECRET WEAPONS
+          EVERY DESIGNER &amp; DEV’S SECRET WEAPONS
         </p>
       </div>
 
       {/* SLIDER */}
-      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 2,
+          maxWidth: '1580px',
+          margin: '0 auto',
+        }}
+      >
         <Swiper
           modules={[Autoplay, Pagination]}
           slidesPerView={5}
           spaceBetween={40}
-          loop={true}
+          loop
           autoplay={{
             delay: 1200,
             disableOnInteraction: false,
@@ -73,11 +96,22 @@ export default function DigitalArsenal() {
             bulletActiveClass: 'custom-bullet-active',
           }}
           breakpoints={{
-            320: { slidesPerView: 3, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 30 },
-            1024: { slidesPerView: 5, spaceBetween: 40 },
+            320: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+            },
           }}
-          style={{ padding: '30px 0' }}
+          style={{
+            padding: '30px 0',
+          }}
         >
           {tools.map((tool, i) => (
             <SwiperSlide key={i}>
@@ -96,7 +130,8 @@ export default function DigitalArsenal() {
                     height: '90px',
                     objectFit: 'contain',
                     filter: 'drop-shadow(0 0 10px rgba(0,0,0,.6))',
-                    transition: 'transform 0.3s ease, filter 0.3s ease',
+                    transition:
+                      'transform 0.3s ease, filter 0.3s ease',
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = 'scale(1.1)'
@@ -115,8 +150,9 @@ export default function DigitalArsenal() {
         </Swiper>
       </div>
 
-      {/* Custom Pagination Style */}
       <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600&family=Island+Moments&display=swap');
+
         .swiper-pagination {
           position: relative;
           bottom: 0;
@@ -126,18 +162,30 @@ export default function DigitalArsenal() {
         .custom-bullet {
           width: 5px;
           height: 5px;
+          display: inline-block;
+          margin: 0 6px !important;
           border-radius: 50%;
           background: #4a3b35;
           opacity: 0.7;
-          margin: 0 6px !important;
-          display: inline-block;
           transition: all 0.3s ease;
         }
 
         .custom-bullet-active {
           background: #d29889;
-          transform: scale(1.3);
           opacity: 1;
+          transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+          .digital-arsenal-title {
+            font-size: clamp(55px, 15vw, 75px);
+          }
+        }
+
+        @media (max-width: 420px) {
+          .digital-arsenal-title {
+            font-size: 55px;
+          }
         }
       `}</style>
     </section>

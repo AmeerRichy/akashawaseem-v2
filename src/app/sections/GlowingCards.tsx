@@ -25,34 +25,45 @@ export default function LabsOfWonders() {
   return (
     <section
       style={{
-  background: 'radial-gradient(circle at 50% bottom, #0b0b0b 0%, #000 100%)',
-  padding: '100px 20px',
-  color: '#fff',
-  textAlign: 'center',
-  position: 'relative',
-  overflow: 'visible', // ✅ allows glow to render outside on mobile
-}}
-
+        background:
+          'radial-gradient(circle at 50% bottom, #0b0b0b 0%, #000 100%)',
+        backgroundColor: '#000',
+        padding: '100px 20px',
+        color: '#fff',
+        textAlign: 'center',
+        position: 'relative',
+        overflow: 'visible',
+        zIndex: 10,
+        isolation: 'isolate',
+      }}
     >
       {/* Header */}
-      <div style={{ marginBottom: '60px' }}>
-        <h2
-          style={{
-            fontFamily: "'Laila', serif",
-            fontSize: '2.5rem',
-            fontWeight: '400',
-            color: '#D29889',
-            marginBottom: '8px',
-            letterSpacing: '1px',
-          }}
-        >
-          Labs of Wonders
-        </h2>
+      <div
+        style={{
+          marginBottom: '60px',
+          position: 'relative',
+          zIndex: 2,
+        }}
+      >
+       <h2
+  style={{
+    fontFamily: "'Island Moments', cursive",
+    fontSize: 'clamp(58px, 5vw, 84px)',
+    fontWeight: '400',
+    color: '#fff',
+    marginBottom: '8px',
+    letterSpacing: '1px',
+    lineHeight: '0.82',
+  }}
+>
+  Labs of Wonders
+</h2>
+
         <p
           style={{
             fontFamily: "'Laila', serif",
             fontSize: '.9rem',
-            color: '#D1B3A4',
+            color: '#aaa',
             letterSpacing: '2px',
           }}
         >
@@ -69,13 +80,19 @@ export default function LabsOfWonders() {
           gap: '40px',
           maxWidth: '1100px',
           margin: '0 auto',
+          position: 'relative',
+          zIndex: 2,
         }}
       >
         {cards.map((card, i) => (
           <div
             key={i}
             className="pod"
-            style={{ ['--glow' as any]: card.glowColor }}
+            style={
+              {
+                '--glow': card.glowColor,
+              } as React.CSSProperties
+            }
           >
             {/* Glow Layers */}
             <div className="glw"></div>
@@ -90,6 +107,7 @@ export default function LabsOfWonders() {
                 alt={card.title}
                 className="wwd-thumbnail"
               />
+
               <a
                 href={card.url}
                 target="_blank"
@@ -105,7 +123,7 @@ export default function LabsOfWonders() {
         ))}
       </div>
 
-      {/* Full CSS for hover animation */}
+      {/* Original CSS with black-and-white default */}
       <style>{`
         .pod {
           display: flex;
@@ -126,9 +144,12 @@ export default function LabsOfWonders() {
           max-height: 700px;
           overflow: hidden;
           border-radius: 12px;
-          filter: blur(3px);
+          filter: grayscale(1) blur(3px);
           z-index: -1;
           pointer-events: none;
+          transition:
+            filter 0.8s ease,
+            opacity 0.8s ease;
         }
 
         .darkBordrBg {
@@ -156,6 +177,10 @@ export default function LabsOfWonders() {
           z-index: -2;
         }
 
+        .pod:hover > .darkBordrBg {
+          filter: grayscale(0) blur(3px);
+        }
+
         .pod:hover > .darkBordrBg::before {
           transform: translate(-50%, -50%) rotate(-98deg);
         }
@@ -163,7 +188,7 @@ export default function LabsOfWonders() {
         .glw {
           max-width: 470px;
           max-height: 880px;
-          filter: blur(30px);
+          filter: grayscale(1) blur(30px);
           opacity: 0.4;
         }
 
@@ -187,6 +212,14 @@ export default function LabsOfWonders() {
           z-index: -2;
         }
 
+        .pod:hover > .glw {
+          filter: grayscale(0) blur(30px);
+        }
+
+        .pod:hover > .glw::before {
+          transform: translate(-50%, -50%) rotate(250deg);
+        }
+
         /* Card Core */
         .pod,
         .wwd-link-preview {
@@ -206,12 +239,15 @@ export default function LabsOfWonders() {
           border-radius: 14px;
           padding: 14px 18px;
           z-index: 2;
-          box-shadow: 0 0 25px var(--glow)40;
-          transition: transform .3s ease;
+          box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+          transition:
+            transform 0.3s ease,
+            box-shadow 0.8s ease;
         }
 
-        .wwd-link-preview:hover {
+        .pod:hover .wwd-link-preview {
           transform: translateY(-4px);
+          box-shadow: 0 0 25px var(--glow);
         }
 
         .wwd-thumbnail {
@@ -219,6 +255,12 @@ export default function LabsOfWonders() {
           height: 80px;
           border-radius: 8px;
           object-fit: contain;
+          filter: grayscale(1);
+          transition: filter 0.8s ease;
+        }
+
+        .pod:hover .wwd-thumbnail {
+          filter: grayscale(0);
         }
 
         .wwd-preview-text {
@@ -244,7 +286,15 @@ export default function LabsOfWonders() {
 
         .wwd-url {
           font-size: 12px;
+          color: #888;
+          transition:
+            color 0.8s ease,
+            text-shadow 0.8s ease;
+        }
+
+        .pod:hover .wwd-url {
           color: var(--glow);
+          text-shadow: 0 0 10px var(--glow);
         }
 
         /* Responsive */
@@ -252,12 +302,14 @@ export default function LabsOfWonders() {
           .pod {
             flex: 1 1 100%;
           }
+
           .wwd-link-preview {
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
             width: 100%;
           }
+
           .wwd-thumbnail {
             margin-bottom: 10px;
           }
@@ -266,5 +318,3 @@ export default function LabsOfWonders() {
     </section>
   )
 }
-
-// asda
