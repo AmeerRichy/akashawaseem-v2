@@ -119,8 +119,8 @@ function calculateBookSize(): BookSize {
   const portrait = viewportWidth <= 768;
 
   if (portrait) {
-    const horizontalSpace = Math.max(260, viewportWidth - 24);
-    const verticalSpace = Math.max(350, viewportHeight - 170);
+    const horizontalSpace = Math.max(220, viewportWidth - 24);
+    const verticalSpace = Math.max(280, viewportHeight - 190);
 
     let pageWidth = Math.min(horizontalSpace, 520);
     let pageHeight = pageWidth / PAGE_RATIO;
@@ -385,7 +385,7 @@ export default function PortfolioMagazine() {
         )}
       </div>
 
-      <style jsx global>{`
+      <style>{`
         @import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600&family=Island+Moments&display=swap");
 
         * {
@@ -653,6 +653,7 @@ export default function PortfolioMagazine() {
 
           .portfolio-magazine-header {
             margin-bottom: 24px;
+            padding: 0 8px;
           }
 
           .portfolio-magazine-header h2 {
@@ -671,6 +672,22 @@ export default function PortfolioMagazine() {
           .portfolio-magazine-book-wrapper,
           .portfolio-magazine-placeholder {
             width: var(--magazine-page-width);
+            max-width: 100%;
+          }
+
+          .portfolio-magazine-stage {
+            max-width: 100%;
+          }
+
+          .portfolio-flipbook {
+            max-width: 100%;
+            touch-action: pan-y pinch-zoom;
+          }
+
+          .magazine-page,
+          .magazine-page-surface,
+          .magazine-page-image {
+            max-width: 100%;
           }
         }
 

@@ -34,6 +34,7 @@ export default function Hero2() {
           FIXED HERO
       ===================================================== */}
       <section
+        className="hero-fixed-panel"
         style={{
           position: "fixed",
           inset: 0,
@@ -45,6 +46,7 @@ export default function Hero2() {
         }}
       >
         <Image
+          className="hero-background-image"
           src="/assets/images/hero200.png"
           alt="Akasha Waseem portfolio banner"
           fill
@@ -80,6 +82,7 @@ export default function Hero2() {
           }}
         >
           <div
+            className="hero-name-lockup"
             style={{
               display: "flex",
               flexDirection: "column",
@@ -102,6 +105,7 @@ export default function Hero2() {
               }}
             >
               <Image
+                className="hero-name-image"
                 src="/assets/images/bnrakasha.png"
                 alt="Akasha"
                 width={320}
@@ -136,6 +140,7 @@ export default function Hero2() {
               }}
             >
               <Image
+                className="hero-name-image"
                 src="/assets/images/bnrwaseem.png"
                 alt="Waseem"
                 width={320}
@@ -156,6 +161,7 @@ export default function Hero2() {
 
       {/* Fixed hero space */}
       <div
+        className="hero-fixed-spacer"
         aria-hidden="true"
         style={{
           position: "relative",
@@ -169,6 +175,7 @@ export default function Hero2() {
           THE STORY SO FAR
       ===================================================== */}
       <motion.section
+        className="story-section"
         initial={{
           y: 120,
         }}
@@ -302,6 +309,7 @@ export default function Hero2() {
           >
             {/* Main portrait */}
             <div
+              className="story-main-portrait"
               style={{
                 position: "absolute",
                 top: 0,
@@ -327,6 +335,7 @@ export default function Hero2() {
 
             {/* Chair portrait */}
             <motion.div
+              className="story-chair-portrait"
               initial={{
                 opacity: 0,
                 y: 80,
@@ -443,7 +452,7 @@ export default function Hero2() {
           />
         </div>
 
-        <style jsx>{`
+        <style>{`
           @media (max-width: 1100px) {
             .story-collage {
               width: 500px !important;
@@ -476,36 +485,105 @@ export default function Hero2() {
           }
 
           @media (max-width: 850px) {
+            .hero-fixed-panel,
+            .hero-fixed-spacer {
+              height: 100svh !important;
+              min-height: 560px;
+            }
+
+            .hero-background-image {
+              object-position: 52% center !important;
+            }
+
+            .hero-name-lockup {
+              align-items: center !important;
+              width: 100vw !important;
+              transform: translate(0, 24svh) !important;
+            }
+
+            .hero-name-image {
+              width: clamp(210px, 66vw, 290px) !important;
+              filter: brightness(0) invert(1);
+              opacity: 0.9;
+            }
+
+            .story-section {
+              min-height: auto !important;
+              padding: 54px 20px 44px !important;
+            }
+
             .story-content {
               display: flex !important;
               flex-direction: column !important;
+              min-height: auto !important;
             }
 
             .story-collage {
-              order: 2;
+              order: 1;
               float: none !important;
               width: 100% !important;
               max-width: 590px !important;
-              height: 560px !important;
+              height: min(560px, 92vw) !important;
               margin: 28px auto 0 !important;
               shape-outside: none !important;
               -webkit-shape-outside: none !important;
             }
 
             .story-text {
-              order: 1;
+              order: 2;
               padding-top: 24px !important;
+            }
+
+            .story-main-portrait {
+              right: 0 !important;
+              width: 90% !important;
+              height: 100% !important;
+            }
+
+            .story-chair-portrait {
+              left: 0 !important;
+              width: 48% !important;
+              height: 50% !important;
+            }
+
+            .story-text p {
+              text-align: left !important;
             }
           }
 
           @media (max-width: 560px) {
+            .hero-fixed-panel,
+            .hero-fixed-spacer {
+              min-height: 500px;
+            }
+
+            .hero-name-lockup {
+              transform: translate(0, 25svh) !important;
+            }
+
+            .story-section {
+              padding: 46px 16px 36px !important;
+            }
+
+            .story-section h2 {
+              font-size: clamp(46px, 13.5vw, 58px) !important;
+              line-height: 0.9 !important;
+              white-space: nowrap;
+            }
+
             .story-collage {
-              height: 450px !important;
+              height: min(430px, 100vw) !important;
               margin-top: 20px !important;
             }
 
             .story-text {
               padding-top: 16px !important;
+            }
+
+            .story-text p {
+              margin-bottom: 20px !important;
+              font-size: 16px !important;
+              line-height: 1.55 !important;
             }
           }
         `}</style>

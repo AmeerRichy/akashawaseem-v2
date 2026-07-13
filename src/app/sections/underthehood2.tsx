@@ -48,6 +48,7 @@ export default function UnderTheHood2() {
 
   return (
     <section
+      className="under-the-hood-section"
       ref={sectionRef}
       style={{
         position: 'relative',
@@ -63,6 +64,7 @@ export default function UnderTheHood2() {
     >
       {/* HEADER */}
       <div
+        className="under-the-hood-header"
         style={{
           position: 'relative',
           zIndex: 2,
@@ -72,6 +74,7 @@ export default function UnderTheHood2() {
         }}
       >
         <h2
+          className="under-the-hood-title"
           style={{
             fontFamily: "'Island Moments', cursive",
             fontSize: 'clamp(58px, 5vw, 84px)',
@@ -227,8 +230,21 @@ export default function UnderTheHood2() {
         }
 
         @media (max-width: 768px) {
+          .under-the-hood-section {
+            padding: 68px 14px 62px !important;
+          }
+
+          .under-the-hood-header {
+            margin-bottom: 32px !important;
+          }
+
+          .under-the-hood-title {
+            font-size: clamp(55px, 15vw, 75px) !important;
+          }
+
           .under-the-hood-video-wrapper {
             width: 100%;
+            border-radius: 2px;
           }
 
           .modes-section {
@@ -251,6 +267,14 @@ export default function UnderTheHood2() {
         }
 
         @media (max-width: 520px) {
+          .under-the-hood-section {
+            padding: 56px 12px 50px !important;
+          }
+
+          .under-the-hood-title {
+            font-size: 55px !important;
+          }
+
           .modes-section {
             margin-top: 35px;
           }

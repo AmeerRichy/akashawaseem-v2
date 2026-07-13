@@ -251,7 +251,7 @@ export default function FlyinWidget() {
         </div>
       </div>
 
-      <style jsx global>{`
+      <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Island+Moments&display=swap');
 
         * {

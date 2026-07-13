@@ -22,6 +22,7 @@ export default function DigitalArsenal() {
 
   return (
     <section
+      className="digital-arsenal-section"
       style={{
         position: 'relative',
         zIndex: 20,
@@ -36,6 +37,7 @@ export default function DigitalArsenal() {
     >
       {/* HEADER */}
       <div
+        className="digital-arsenal-header"
         style={{
           position: 'relative',
           zIndex: 2,
@@ -43,6 +45,7 @@ export default function DigitalArsenal() {
         }}
       >
         <h2
+          className="digital-arsenal-title"
           style={{
             fontFamily: "'Island Moments', cursive",
             fontSize: 'clamp(58px, 5vw, 84px)',
@@ -57,6 +60,7 @@ export default function DigitalArsenal() {
         </h2>
 
         <p
+          className="digital-arsenal-subtitle"
           style={{
             fontFamily: "'Halant', serif",
             fontSize: '12px',
@@ -74,6 +78,7 @@ export default function DigitalArsenal() {
 
       {/* SLIDER */}
       <div
+        className="digital-arsenal-slider"
         style={{
           position: 'relative',
           zIndex: 2,
@@ -123,6 +128,7 @@ export default function DigitalArsenal() {
                 }}
               >
                 <img
+                  className="digital-arsenal-tool-image"
                   src={tool.img}
                   alt={tool.name}
                   style={{
@@ -177,14 +183,42 @@ export default function DigitalArsenal() {
         }
 
         @media (max-width: 768px) {
+          .digital-arsenal-section {
+            padding: 68px 0 74px !important;
+          }
+
+          .digital-arsenal-header {
+            margin-bottom: 30px !important;
+            padding: 0 16px;
+          }
+
           .digital-arsenal-title {
-            font-size: clamp(55px, 15vw, 75px);
+            font-size: clamp(55px, 15vw, 75px) !important;
+          }
+
+          .digital-arsenal-slider {
+            width: 100%;
+            max-width: 100% !important;
+          }
+
+          .digital-arsenal-tool-image {
+            width: 72px !important;
+            height: 72px !important;
+          }
+
+          .swiper-pagination {
+            margin-top: 20px;
           }
         }
 
         @media (max-width: 420px) {
           .digital-arsenal-title {
-            font-size: 55px;
+            font-size: 55px !important;
+          }
+
+          .digital-arsenal-tool-image {
+            width: 62px !important;
+            height: 62px !important;
           }
         }
       `}</style>

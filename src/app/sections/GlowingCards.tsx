@@ -300,8 +300,15 @@ export default function LabsOfWonders() {
 
         /* Responsive */
         @media (max-width: 768px) {
+          .glowing-cards-section {
+            padding: 64px 14px !important;
+            overflow: hidden !important;
+          }
+
           .pod {
             flex: 1 1 100%;
+            width: 100%;
+            min-width: 0;
           }
 
           .wwd-link-preview {
@@ -309,10 +316,27 @@ export default function LabsOfWonders() {
             align-items: flex-start;
             text-align: left;
             width: 100%;
+            max-width: 460px;
+            min-height: auto;
           }
 
           .wwd-thumbnail {
             margin-bottom: 10px;
+          }
+        }
+
+        @media (max-width: 420px) {
+          .glowing-cards-section {
+            padding: 54px 12px !important;
+          }
+
+          .wwd-link-preview {
+            padding: 16px;
+          }
+
+          .wwd-thumbnail {
+            width: 68px;
+            height: 68px;
           }
         }
       `}</style>
