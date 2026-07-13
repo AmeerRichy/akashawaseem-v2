@@ -77,13 +77,13 @@ export default function DigitalArsenal() {
         style={{
           position: 'relative',
           zIndex: 2,
-          maxWidth: '1580px',
+          maxWidth: '1300px',
           margin: '0 auto',
         }}
       >
         <Swiper
           modules={[Autoplay, Pagination]}
-          slidesPerView={5}
+          slidesPerView={6}
           spaceBetween={40}
           loop
           autoplay={{

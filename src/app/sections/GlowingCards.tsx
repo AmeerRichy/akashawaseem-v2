@@ -24,6 +24,7 @@ export default function LabsOfWonders() {
 
   return (
     <section
+      className="glowing-cards-section"
       style={{
         background:
           'radial-gradient(circle at 50% bottom, #0b0b0b 0%, #000 100%)',
@@ -48,7 +49,7 @@ export default function LabsOfWonders() {
        <h2
   style={{
     fontFamily: "'Island Moments', cursive",
-    fontSize: 'clamp(58px, 5vw, 84px)',
+    fontSize: 'clamp(58px, 5vw, 84px)!important',
     fontWeight: '400',
     color: '#fff',
     marginBottom: '8px',

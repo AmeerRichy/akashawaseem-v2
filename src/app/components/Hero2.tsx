@@ -300,20 +300,6 @@ export default function Hero2() {
               marginBottom: "10px",
             } as ShapeOutsideStyle}
           >
-            {/* Beige box */}
-            <div
-              style={{
-                position: "absolute",
-                top: "58px",
-                right: 0,
-                zIndex: 1,
-                width: "72%",
-                height: "60%",
-                borderRadius: "7px",
-                backgroundColor: "#c6c0b8",
-              }}
-            />
-
             {/* Main portrait */}
             <div
               style={{

@@ -7,6 +7,7 @@ import {
   Poppins,
   Laila,
   Poiret_One,
+  Halant,
 } from "next/font/google";
 import "./globals.css";
 
@@ -50,6 +51,13 @@ const poiret = Poiret_One({
   weight: ["400"],
 });
 
+const halant = Halant({
+  variable: "--font-halant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 // ✅ Metadata with multiple favicon fallbacks
 export const metadata: Metadata = {
   title: "Akasha Waseem",
@@ -78,6 +86,7 @@ export default function RootLayout({
         ${poppins.variable}
         ${laila.variable}
         ${poiret.variable}
+        ${halant.variable}
       `}
     >
       <head>

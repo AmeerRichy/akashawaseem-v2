@@ -289,7 +289,7 @@ export default function FlyinWidget() {
           align-items: end;
           gap: 28px;
           width: 100%;
-          max-width: 1580px;
+          max-width: 1400px;
           min-height: 760px;
           margin: 0 auto;
         }
@@ -379,7 +379,7 @@ export default function FlyinWidget() {
           margin: 0 auto 48px;
           color: #ffffff;
           font-family: 'Halant', serif;
-          font-size: 22px;
+          font-size: 18px;
           font-weight: 400;
           line-height: 1.45;
           text-align: center;

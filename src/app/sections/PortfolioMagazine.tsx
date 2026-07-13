@@ -38,12 +38,12 @@ const magazineSpreads = [
     right: "/assets/images/magazine/spread-01-right.png",
   },
   {
-    left: "/assets/images/magazine/spread-02-left.png",
-    right: "/assets/images/magazine/spread-02-right.png",
+    right: "/assets/images/magazine/spread-02-left.png",
+    left: "/assets/images/magazine/spread-02-right.png",
   },
   {
-    left: "/assets/images/magazine/spread-03-left.png",
-    right: "/assets/images/magazine/spread-03-right.png",
+    right: "/assets/images/magazine/spread-03-left.png",
+    left: "/assets/images/magazine/spread-03-right.png",
   },
   {
     left: "/assets/images/magazine/spread-04-left.png",
@@ -164,7 +164,6 @@ function calculateBookSize(): BookSize {
 export default function PortfolioMagazine() {
   const bookRef = useRef<FlipBookRef | null>(null);
   const resizeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const dragHintRef = useRef<HTMLDivElement | null>(null);
 
   const [mounted, setMounted] = useState(false);
   const [bookSize, setBookSize] = useState<BookSize | null>(null);
@@ -329,13 +328,6 @@ export default function PortfolioMagazine() {
                 const pageIndex = Number(event.data);
 
                 setCurrentPage(pageIndex);
-
-                if (dragHintRef.current) {
-                  dragHintRef.current.style.opacity =
-                    pageIndex === 0 ? "1" : "0";
-                  dragHintRef.current.style.visibility =
-                    pageIndex === 0 ? "visible" : "hidden";
-                }
               }}
             >
               <MagazinePage
@@ -361,9 +353,16 @@ export default function PortfolioMagazine() {
           <div className="portfolio-magazine-placeholder" />
         )}
 
-        {mounted && bookSize && !bookSize.portrait && (
-          <div ref={dragHintRef} className="magazine-drag-instruction">
-            <span>Drag Here</span>
+        {mounted &&
+          bookSize &&
+          !bookSize.portrait &&
+          (isFrontCover || isBackCover) && (
+          <div
+            className={`magazine-drag-instruction ${
+              isBackCover ? "magazine-drag-instruction-end" : ""
+            }`}
+          >
+            <span>{isBackCover ? "Flip Over" : "Drag Here"}</span>
 
             <svg viewBox="0 0 190 115" fill="none" aria-hidden="true">
               <path
@@ -550,7 +549,7 @@ export default function PortfolioMagazine() {
         .magazine-drag-instruction {
           position: absolute;
           z-index: 10;
-          top: 25%;
+          top: 70%;
           left: calc(50% + (var(--magazine-page-width) / 2) + 55px);
           display: flex;
           flex-direction: column;
@@ -581,6 +580,22 @@ export default function PortfolioMagazine() {
           animation: magazine-drag-motion 2.2s ease-in-out infinite;
         }
 
+        .magazine-drag-instruction-end {
+          right: calc(50% + (var(--magazine-page-width) / 2) + 55px);
+          left: auto;
+        }
+
+        .magazine-drag-instruction-end span {
+          align-self: flex-start;
+          margin-right: 0;
+          margin-left: 3px;
+        }
+
+        .magazine-drag-instruction-end svg {
+          transform: scaleX(-1) rotate(-4deg);
+          animation-name: magazine-drag-motion-end;
+        }
+
         @keyframes magazine-drag-motion {
           0%,
           100% {
@@ -592,10 +607,26 @@ export default function PortfolioMagazine() {
           }
         }
 
+        @keyframes magazine-drag-motion-end {
+          0%,
+          100% {
+            transform: scaleX(-1) rotate(-4deg) translateX(0);
+          }
+
+          50% {
+            transform: scaleX(-1) rotate(-4deg) translateX(-9px);
+          }
+        }
+
         @media (max-width: 1100px) {
           .magazine-drag-instruction {
             left: calc(50% + (var(--magazine-page-width) / 2) + 15px);
             width: 145px;
+          }
+
+          .magazine-drag-instruction-end {
+            right: calc(50% + (var(--magazine-page-width) / 2) + 15px);
+            left: auto;
           }
 
           .magazine-drag-instruction span {

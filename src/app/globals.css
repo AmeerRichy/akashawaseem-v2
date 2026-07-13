@@ -35,6 +35,21 @@ a {
   text-decoration: none;
 }
 
+/* Keep homepage body copy consistent with the paragraph typography in Hero2. */
+.homepage-copy
+  :where(p, span, a, button, li, label, small, time, figcaption):not(
+    .glowing-cards-section *
+  ) {
+  font-family: var(--font-halant), serif !important;
+}
+
+.homepage-copy p:not(.glowing-cards-section *) {
+  font-size: clamp(17px, 1.22vw, 21px) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0.005em !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -14,8 +14,8 @@ import UnderTheHood2 from './sections/underthehood2';
 
 export default function Home() {
   return (
-    <>
-    <Hero2/>
+    <div className="homepage-copy">
+      <Hero2/>
       {/* <Hero /> */}
       {/* <StorySection/> */}
       <FlyinWidget/>
@@ -28,6 +28,6 @@ export default function Home() {
       {/* <UnderTheHood/> */}
       <Testimonials/>
       <Footer/>
-    </>
+    </div>
   );
 }
