@@ -7,6 +7,7 @@ import FlyinWidget from './sections/flyin';
 import LabsOfWonders from './sections/GlowingCards';
 import PathToKnowledge from './sections/PathToKnowledge';
 import PortfolioMagazine from './sections/PortfolioMagazine';
+import PortfolioVideoSection from './sections/PortfolioVideoSection';
 import StorySection from './sections/story';
 import Testimonials from './sections/Testimonials';
 import UnderTheHood from './sections/UnderTheHood';
@@ -20,6 +21,7 @@ export default function Home() {
       {/* <StorySection/> */}
       <FlyinWidget/>
        <PortfolioMagazine/>
+       <PortfolioVideoSection/>
       <LabsOfWonders/>
       <DigitalArsenal/>
       <UnderTheHood2/>

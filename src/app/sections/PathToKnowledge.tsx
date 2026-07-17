@@ -110,7 +110,7 @@ export default function PathToKnowledge() {
           z-index: 2;
           display: flex;
           width: 100%;
-          max-width: 1400px;
+          max-width: 1200px;
           margin: 0 auto;
           flex-direction: column;
           gap: 14px;
