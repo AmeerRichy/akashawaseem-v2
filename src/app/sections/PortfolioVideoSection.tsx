@@ -15,22 +15,22 @@ type PortfolioVideo = {
 const portfolioVideos: PortfolioVideo[] = [
   {
     id: 1,
-    title: 'Nescafé',
-    category: 'AI-ASSISTED PRODUCT FILM Nescafé — The Morning Ritual',
+    title: 'Hico — Sharing Sweet Moments',
+    category: 'AI-ASSISTED COMMERCIAL FILM',
     video: '/assets/vids/2.mp4',
     poster: '/assets/images/nes.png',
   },
   {
     id: 2,
-    title: 'Magnum',
-    category: 'AI-ASSISTED BRAND FILM Magnum — A Taste of Connection',
+    title: 'Magnum — A Taste of Connection',
+    category: 'AI-ASSISTED BRAND FILM',
     video: '/assets/vids/1.mp4',
     poster: '/assets/images/magnum.png',
   },
   {
     id: 3,
-    title: 'Hico',
-    category: 'AI-ASSISTED COMMERCIAL FILM Hico — Sharing Sweet Moments',
+    title: 'Nescafé — The Morning Ritual',
+    category: 'AI-ASSISTED PRODUCT FILM',
     video: '/assets/vids/3.mp4',
     poster: '/assets/images/hico.png',
   },
